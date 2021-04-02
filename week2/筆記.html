@@ -1,0 +1,129 @@
+HTML 教學
+<html>
+<body>
+
+<h1>文字大小</h1>
+<p>內文</p>
+
+a=超連結
+href=簡寫
+<a href="網址">顯示</a>
+The target attribute can have one of the following values:
+_self - Default. Opens the document in the same window/tab as it was clicked
+_blank - Opens the document in a new window or tab
+_parent - Opens the document in the parent frame
+_top - Opens the document in the full body of the window
+ex:<a href="網址" target="_blank">顯示</a>
+ps:相對路徑->同資料夾寫檔名、跟目錄
+
+
+<img src="圖案" alt="圖片顯示不出的時候出現文字" width="寬度" hight="高度">
+(可以 不打alt、不指定寬高)
+
+
+style屬性
+{
+<h1 style=font-size:36px>標題<p>
+<p style="表達文件格式">文字</P>
+	{
+	顏色->color:red
+		   :色碼
+	色碼=># ff 00 00(紅 綠 藍)(16進位顯示)
+  		rgba(255,99,71,0.5)
+		hsla(9,100%,64%,0.5)
+	}
+<body style="background-color:powerblue;">
+ps.顏色tomato
+<h1 style="border:2px solid(實線)/dotted/dashed(虛線) DogerBlue;">外框</h>
+
+<h1 style="font-family:verdani/(courier);">字形</h>
+<h1 style="text-align:center;">對齊</h>
+
+}
+
+<html lang="en(指定語言)">
+<p title="追加飄浮提示">文字</p>
+<p>&nbsp;<p>空白
+<hr/>分割線
+<br/>強制換行
+<pre>不格式化</p>
+
+<p>普通文字<b>粗體</b>普通文字</p>
+<b> - Bold text
+<strong> - Important text
+<i> - Italic text
+<em> - Emphasized text
+<mark> - Marked text
+<small> - Smaller text
+<del> - Deleted text
+<ins> - Inserted text
+<sub> - Subscript text
+<sup> - Superscript text
+<q>引用("")</q>
+<abbr>縮寫
+<cite>斜引用
+
+
+<blockqute cite="超連結">引用內容<blockquote>
+<address>地址</address>
+<bdo dir="rtl">反向寫</bdo>
+
+<!--This is a comment-->
+<p>註解</p>
+<!-- Remember to add more information here -->
+
+<style>全標記
+body {backgriund-color:powerblue}
+<body></body>
+
+網頁連網頁寫相對路徑
+<p><a href="跟目錄網址">顯示<a><p>
+<p><a href="../(上一頁)網址">顯示<a><p>
+
+圖片不同部位不同連結
+<img src="圖片" alt="文字" usemap="#workmap">
+<map name="workmap">
+	<area shape="rect" coords="範圍座標" href="網址">
+
+預設表格
+<table style="width:100%">
+  <tr>(橫一標題)
+    <th>第一項</th>
+    <th>第二項</th> 
+    <th>第三項</th>
+  </tr>
+  <tr>(橫二)
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>(橫三)
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+  
+</table>
+
+表格細項(各種設定)
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+
+ 
+
+</body>
+</html>
