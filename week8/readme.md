@@ -11,13 +11,14 @@ star(5)
 *****
 第一題
 檔案 : star.js
-
+```
 function star(n) {
   for (var i=0; i<n; i++)
     console.log('*')
 }
 
 star(5)
+```
 *****
 執行結果
 
