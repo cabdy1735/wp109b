@@ -20,23 +20,102 @@
     <td>94</td>
   </tr>
   
-</table>
+
 
 表格細項(各種設定)
+<style>
 table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
+  margin:8px(外距);
+  font-family: arial(字體), sans-serif(無襯線體);
+  border-collapse: collapse(去格線邊界);
+  width(寬度): 100%;
 }
 
 td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
+  (邊框)border: 1px solid #dddddd;
+  (文字靠左)text-align: left;
+  (內邊距)padding: 8px;
 }
 
+間隔背景灰
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+</style>
+
+
+list列表
+基本樣式
+<ul>無序列表
+  <li>Coffee</li>列表項
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>  
+
+
+<ol>一個有序列表
+  <li>Coffee</li>列表項
+  <li>Tea</li>
+  <li>Milk</li>
+</ol> 
+
+<dl>描述列表
+  <dt>Coffee</dt>一個術語
+  <dd>- black hot drink</dd>描述術語
+  <dt>Milk</dt>
+  <dd>- white cold drink</dd>
+</dl>
+
+
+<div style="(框線)border: 1px solid black">區塊(會換行)</div>
+<p>文字 <span style="border: 1px solid black">區塊(不會換行)</span> element inside a paragraph.</p>
+
+
+表單
+<form action="/action_page.php">
+  <label for="fname">(標記)</label><br>
+  <input type="text"(類型) id="fname" name="fname" value="John"><br>
+
+  <label for="lname">Last name:</label><br>
+  <input type="radio" id="lname" name="lname" value="Doe"><br><br>
+
+  <input type="submit" value="Submit">(按鈕/提交需伺服器)
+</form> 
+
+<form action="/action_page.php">下拉式選單
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars" size="4"(顯示選項) multiple(多選)></select>
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat"selected(預設)>Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+  <input type="submit">
+</form>
+
+
+<form action="/action_page.php">輸入文章
+  <textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+  <br><br>
+  <input type="submit">
+</form>
+
+<button type="button" onclick="alert('javascript啟動')">按鈕</button>
+
+
+<form action="/action_page.php">可輸入可選
+  <input list="browsers" name="browser">
+  <datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+  </datalist>
+  <input type="submit">
+</form>
+
+<input type="屬性">
+https://www.w3schools.com/html/html_form_input_types.asp
+
 <body>
 <html>
+  ```
