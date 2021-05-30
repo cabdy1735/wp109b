@@ -1,0 +1,405 @@
+```
+#id
+.class
+
+<p id="abc">示範</p>
+<p class="abc">示範2</p>
+
+
+樣式管理
+--完整範例
+<html>
+<head>
+<style>
+div p {  background-color: yellow;}
+</style>
+</head>
+<body>
+
+<div>(有div效果)
+  <p>文字</p>                    
+  <p>文字</p>
+  <section><p>文字</p></section>
+</div>
+
+(無div效果)
+<p>文字</p>
+<p>文字</p>
+
+</body>
+</html>
+
+
+<style>
+    div > p {      background-color: yellow;    }
+</style>
+    
+<div>
+<p>有效果文字</p>
+<p>有效果文字</p>
+<section><p>無效果文字</p></section> 
+<p>有效果文字</p>
+</div>
+    
+
+overflow(超出範圍的)-x/y(限定長寬部分):visible(顯示)/hidden(隱藏) /scroll(下拉式)/auto(有超出時才有下拉式);
+
+img {    float: right/ left;  }(圖片浮動位置)
+
+
+<style>(所有div皆有效果)
+    div {
+      float: left;
+      padding: 15px; 
+    }
+    
+    .div1 {      background: red;    }
+    
+    .div2 {      background: yellow;    }
+    
+    .div3 {      background: green;    }
+</style>
+
+
+<html>
+<head>
+<style>
+div {
+  border: 3px solid #4CAF50;
+  padding: 5px;
+}
+
+.img1 {  float: right;}
+
+.clearfix {  overflow: auto;}
+
+
+組合範例
+</style>
+</head>
+<body>
+
+<div>
+  <img class="img1" src="圖片.jpg" >
+  圖片再右，框只包含文字
+</div>
+
+<p style="clear:right">兩範例中間隔一行</p>
+
+<div class="clearfix">
+  <img class="img1" src="圖片.jpg" >
+  圖片再右，框內包含文字與圖
+</div>
+
+</body>
+</html>
+
+
+<style>(inline-block排版)https://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block_nav
+.nav {
+  background-color: yellow; 
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px;
+}
+</style>
+
+<ul class="nav">
+  <li><a href="#home">Home</a></li>
+  <li><a href="#about">About Us</a></li>
+  <li><a href="#clients">Our Clients</a></li>  
+  <li><a href="#contact">Contact Us</a></li>
+</ul>
+
+
+<style>(使標移動到位置時)
+    a.highlight:hover {      color: #ff0000;    } 
+</style>
+<p><a class="highlight" href="css_syntax.asp">變色</a></p>
+<p><a href="default.asp">不變色</a></p>
+
+
+<style>
+p:first-child {
+  color: blue;
+} 
+</style>
+<p>藍色字</p>
+<p>不變</p>
+
+
+<style>
+    p:first-child i {
+      color: blue;
+    } 
+</style>
+<p>文字 <i>變色</i> 文字 <i>變色</i>文字</p>
+<p>文字 <i>文字</i> 文字 <i>文字</i> 文字</p>
+
+<style>
+    q:lang(no) {      quotes: "~" "~";    }
+</style>
+<p>文字 <q lang="no">文字(前後追加~)</q> 文字</p>
+
+
+<style>
+    p::first-letter {
+      color: #ff0000;
+      font-size: xx-large;
+    }
+</style>
+<p>首個字母放大</p>
+    
+<style>
+    p::first-letter {
+      color: #ff0000;
+      font-size: xx-large;
+    }
+    
+    p::first-line {
+      color: #0000ff;
+      font-variant: small-caps;
+    }
+</style>
+<p>首字母紅字放大+第一行大寫藍字</p>
+ 
+
+組合https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_vertical_gray
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h2>Vertical Navigation Bar</h2>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+</body>
+</html>
+
+
+
+<html>組合https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_text
+<head>
+<style>
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;(圖層:預設為0，1為上一層)
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<h2>Hoverable Dropdown</h2>
+<p>Move the mouse over the text below to open the dropdown content.</p>
+
+<div class="dropdown">
+  <span>Mouse over me</span>
+  <div class="dropdown-content">
+  <p>Hello World!</p>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+<style>
+    a[target=_blank] {
+      background-color: yellow;
+    }
+</style>
+</head>
+<body>
+    
+<a href="網址">文字(網頁出現)</a>
+<a href="網址" target="_blank">變色(新分頁)</a>
+<a href="網址" target="_top">不變(網址變化)</a>
+
+
+
+
+範例--三欄
+https://www.w3schools.com/css/tryit.asp?filename=trycss_website_layout_grid
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Header</h1>
+  <p>Resize the browser window to see the responsive effect.</p>
+</div>
+
+<div class="topnav">
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+</div>
+
+<div class="row">
+  <div class="column">
+    <h2>Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+  
+  <div class="column">
+    <h2>Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+  
+  <div class="column">
+    <h2>Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
+<style> (圓角)
+    #rcorners1 {
+      border-radius: 25px;
+      background: #73AD21;
+      padding: 20px; 
+      width: 200px;
+      height: 150px;  
+    }
+    
+    #rcorners2 {
+      border-radius: 25px;
+      border: 2px solid #73AD21;
+      padding: 20px; 
+      width: 200px;
+      height: 150px;  
+    }
+    
+    #rcorners3 {
+      border-radius: 25px;
+      background: url(paper.gif);
+      background-position: left top;
+      background-repeat: repeat;
+      padding: 20px; 
+      width: 200px;
+      height: 150px;  
+    }
+    </style>
+    
+    <p id="rcorners1">實心框</p>
+    <p id="rcorners2">空心框</p>
+    <p id="rcorners3">圖片框</p>
+    
+```
