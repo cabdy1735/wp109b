@@ -2,6 +2,9 @@
 CC BY-SA 3.0 協議文本
 Creative Commons
 
+
+css 製作
+
 <style>
     body{整個網頁的版面配置  }
     hi,p{}
@@ -90,16 +93,84 @@ outline ->border ->文字
 outline-style
 
 <style>
-    h1 {
-      text-decoration: overline;(刪除線:字上方)
+    h1 {text-decoration: overline;(刪除線:字上方)    }
+    
+    h2 {text-decoration: line-through;(刪除線:字)    }
+    
+    h3 {text-decoration: underline;(刪除線:字下方)    }
+</style>
+
+<style>
+    p.uppercase {      text-transform: uppercase;    }(全大寫)
+    
+    p.lowercase {      text-transform: lowercase;    }(全小寫)
+    
+    p.capitalize {      text-transform: capitalize;    }(單字字首大寫)
+    
+    p {  text-indent: 50px;} (文章縮排)
+
+    h1{letter: spacing 3px;}(字母間距) 
+
+    h1 {  text-shadow: 5px 2px 5px red;}(陰影:右 下 模糊 顏色)
+</style>
+
+
+<style>文字細項變化
+    p.a {      font: 20px Arial, sans-serif;    }    
+    p.b {      font: italic bold 12px/30px Georgia, serif; }
+</style>
+
+
+超連結
+<p><b><a href="網址" target="_blank"(新分頁)>連結</a></b>(粗體)</p>
+<style>
+    /*未訪問的鏈接*/
+    a:link {      color: red;    }
+    
+   /* 訪問過的鏈接 */
+    a:visited {      color: green;    }
+    
+    /*將鼠標懸停在鏈接上*/
+    a:hover {      color: hotpink;    }
+    
+    /* 選擇的鏈接 */
+    a:active {      color: blue;    }
+</style>
+
+
+清單
+<style>
+    ul.a {      list-style-type: circle;    }(圓形圖示)
+    
+    ul.b {      list-style-type: square;    }(方形圖示)
+    
+    ol.c {      list-style-type: upper-roman;    }(羅馬字母)
+    
+    ol.d {      list-style-type: lower-alpha;    }(小寫字母)
+</style>
+
+
+
+最大寬度(拖動視窗條是否變化)
+<style>
+    div.ex1 {
+      width: 500px;
+      margin: auto;
+      border: 3px solid #73AD21;
     }
     
-    h2 {
-      text-decoration: line-through;(刪除線:字)
+    div.ex2 {
+      max-width: 500px;
+      margin: auto;
+      border: 3px solid #73AD21;
     }
+</style>  
+<h2>CSS Max-width</h2>
     
-    h3 {
-      text-decoration: underline;(刪除線:字下方)
-    }
-    </style>
+<div class="ex1">This div element has width: 500px;</div>
+<br>
+    
+<div class="ex2">This div element has max-width: 500px;</div>
+  
+
 ```
