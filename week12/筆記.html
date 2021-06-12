@@ -1,0 +1,562 @@
+```
+開發人員工具
+
+視窗所見
+window.innerHeight - the inner height of the browser window (in pixels)
+window.innerWidth - the inner width of the browser window (in pixels)
+視窗本身(加下拉)
+document.documentElement.clientHeight
+document.documentElement.clientWidth
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var w = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+
+var h = window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
+
+var x = document.getElementById("demo");
+x.innerHTML = "Browser inner window width: " + w + ", height: " + h + ".";
+</script>
+
+</body>
+</html>
+
+
+<html>顯示網址
+<body>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 
+"The full URL of this page is:<br>" + window.location.href;
+</script>
+
+</body>
+</html>
+
+
+網址相關指令
+window.location.href returns the href (URL) of the current page
+window.location.hostname returns the domain name of the web host
+window.location.pathname returns the path and filename of the current page
+window.location.protocol returns the web protocol used (http: or https:)
+window.location.assign() loads a new document
+
+
+<html>上衣頁指令
+<head>
+<script>
+function goBack() {
+  window.history.back()
+}
+</script>
+</head>
+<body>
+
+<input type="button" value="Back" onclick="goBack()">
+
+</body>
+</html>
+
+
+Navigator
+
+
+<html>顯示小視窗Popup Boxes
+<body>
+
+<h2>JavaScript Alert</h2>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  alert("I am an alert box!");
+}
+</script>
+
+</body>
+</html>
+
+<html>輸入名字
+<body>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var txt;
+  var person = prompt("Please enter your name:", "Harry Potter");
+  if (person == null || person == "") {
+    txt = "User cancelled the prompt.";
+  } else {
+    txt = "Hello " + person + "! How are you today?";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>
+
+時間
+<html>
+<body>
+
+<p>Click "Try it". Wait 3 seconds. The page will alert "Hello".</p>
+<p>Click "Stop" to prevent the first function to execute.</p>
+<p>(You must click "Stop" before the 3 seconds are up.)</p>
+
+<button onclick="myVar = setTimeout(myFunction, 3000/*毫秒*/)">Try it</button>
+
+<button onclick="clearTimeout(myVar)">Stop it</button>
+
+<script>
+function myFunction() {
+  alert("Hello");
+}
+</script>
+</body>
+</html>
+
+規律動作
+<html>時鐘
+<body>
+
+<p>A script on this page starts this clock:</p>
+
+<p id="demo"></p>
+
+<button onclick="clearInterval(myVar)">Stop time</button>
+
+<script>
+var myVar = setInterval(myTimer ,1000);
+function myTimer() {
+  var d = new Date();
+  document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+</script>
+
+</body>
+</html>
+
+與伺服器連動
+cookie
+AJAX
+
+JSON.stringify()
+把()中的物件屬性變字串
+var 字串=JSON.stringify(有物件)
+
+JSON.parse()
+把()中的字串變物件屬性
+
+
+DOM
+<html>
+<body>
+
+<h2>My First Page</h2>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "Hello World!";
+</script>
+
+</body>
+</html>
+
+
+Document
+document.getElementById(id) 	        Find an element by element id
+document.getElementsByTagName(name)	    Find elements by tag name
+document.getElementsByClassName(name)   Find elements by class name
+
+<html>取得p元素
+<body>
+
+<h2>Finding HTML Elements by Tag Name</h2>
+
+<div id="main">
+<p>The DOM is very useful.</p>
+<p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+</div>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("main");
+var y = x.getElementsByTagName("p");
+document.getElementById("demo").innerHTML = 
+'The first paragraph (index 0) inside "main" is: ' + y[0].innerHTML;
+</script>
+
+</body>
+</html>
+
+
+<html>取得網頁元素
+<body>
+
+<h2>Finding HTML Elements by Query Selector</h2>
+
+<p>Hello World!</p>
+
+<p class="intro">The DOM is very useful.</p>
+<p class="intro">This example demonstrates the <b>querySelectorAll</b> method.</p>
+
+<p id="demo"></p>
+<script>
+var x = document.querySelectorAll("p.intro");
+document.getElementById("demo").innerHTML = 
+'The first paragraph (index 0) with class="intro": ' + x[0].innerHTML;
+</script>
+
+</body>
+</html>
+
+
+<html>取得表單元素
+<body>
+
+<h2>Finding HTML Elements Using document.forms</h2>
+
+<form id="frm1" action="/action_page.php">
+  First name: <input type="text" name="fname" value="Donald"><br>
+  Last name: <input type="text" name="lname" value="Duck"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<p>Click "Try it" to display the value of each element in the form.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.forms["frm1"];
+  var text = "";
+  var i;
+  for (i = 0; i < x.length ;i++) {
+    text += x.elements[i].value + "<br>";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
+
+<html>修改網頁文字內容
+<body>
+
+<h1 id="id01">Old Heading</h1>
+
+<script>
+var element = document.getElementById("id01");
+element.innerHTML = "New Heading";
+</script>
+
+<p>JavaScript changed "Old Heading" to "New Heading".</p>
+
+</body>
+</html> 
+
+
+<html>修改網頁圖片內容
+<body>
+
+<img id="image" src="smiley.gif" width="160" height="120">
+
+<script>
+document.getElementById("image").src = "landscape.jpg";
+</script>
+
+<p>The original image was smiley.gif, but the script changed it to landscape.jpg</p>
+
+</body>
+</html>
+
+
+<html>操作修改文字樣板
+<body>
+
+<h1 id="id1">My Heading 1</h1>
+
+<button type="button" 
+onclick="document.getElementById('id1').style.color = 'red'">
+Click Me!</button>
+
+</body>
+</html>
+
+
+
+<html>動畫
+<style>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;/*(分層)*/
+  background: yellow;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;/*(分層)*/
+  background-color: red;
+}
+</style>
+<body>
+
+<p><button onclick="myMove()">Click Me</button></p> 
+
+<div id ="container">
+  <div id ="animate"></div>
+</div>
+
+<script>
+var id = null;
+function myMove() {
+  var elem = document.getElementById("animate");   
+  var pos = 0;
+  clearInterval(id);
+  id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + "px"; 
+      elem.style.left = pos + "px"; 
+    }
+  }
+}
+</script>
+
+</body>
+</html>
+
+<html>互動
+<body>
+
+<h1 onclick="this.innerHTML='Ooops!'">Click on this text!</h1>
+
+</body>
+</html>
+<html>互動(同上)
+<body>
+
+<h1 onclick="changeText(this)">Click on this text!</h1>
+
+<script>
+function changeText(id) {
+  id.innerHTML = "Ooops!";
+}
+</script>
+
+</body>
+</html>
+
+<html>
+<body>
+
+<button id="myBtn">動態設定 修改</button>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("myBtn").onclick = displayDate;
+
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+</script>
+
+</body>
+</html> 
+
+<html>
+<head>
+<script>
+function myFunction() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+</head>
+<body>
+
+Enter your name: <input type="text" id="fname" onchange="myFunction()">
+
+<p>確定後框內文字統一大寫</p>
+
+</body>
+</html>
+
+<html>
+<body>
+
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+滑鼠進入</div>
+
+<script>
+function mOver(obj) {
+  obj.innerHTML = "Thank You"
+}
+
+function mOut(obj) {
+  obj.innerHTML = "Mouse Over Me"
+}
+</script>
+
+</body>
+</html> 
+
+
+<html>滑鼠框內長按
+<body>
+
+<div onmousedown="mDown(this)" onmouseup="mUp(this)"
+style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+Click Me</div>
+
+<script>
+function mDown(obj) {
+  obj.style.backgroundColor = "#1ec5e5";
+  obj.innerHTML = "Release Me";
+}
+
+function mUp(obj) {
+  obj.style.backgroundColor="#D94A38";
+  obj.innerHTML="Thank You";
+}
+</script>
+
+</body>
+</html> 
+
+<html>
+<body>
+        
+<button id="myBtn">追加操作</button>
+        
+<p id="demo"></p>
+        
+<script>
+var x = document.getElementById("myBtn");
+x.addEventListener("mouseover", myFunction);
+x.addEventListener("click", mySecondFunction);
+x.addEventListener("mouseout", myThirdFunction);
+        
+function myFunction() {
+  document.getElementById("demo").innerHTML += "Moused over!<br>";
+}
+        
+function mySecondFunction() {
+    document.getElementById("demo").innerHTML += "Clicked!<br>";
+}
+        
+function myThirdFunction() {
+    document.getElementById("demo").innerHTML += "Moused out!<br>";
+}
+</script>
+        
+</body>
+</html>
+      
+
+<html>
+<body>
+
+<button id="myBtn">傳參數</button>
+
+<p id="demo"></p>
+
+<script>
+var p1 = 5;
+var p2 = 7;
+
+document.getElementById("myBtn").addEventListener("click", function() {
+  myFunction(p1, p2);
+});
+
+function myFunction(a, b) {
+  var result = a * b;
+  document.getElementById("demo").innerHTML = result;
+}
+</script>
+
+</body>
+</html>
+
+
+<html>
+<head>
+<style>
+#myDIV {
+  background-color: coral;
+  border: 1px solid;
+  padding: 50px;
+  color: white;
+  font-size: 20px;
+}
+</style>
+</head>
+<body>
+
+<div id="myDIV">
+  <p>滑鼠橘色區塊內移動時出現亂數</p>
+  <button onclick="removeHandler()" id="myBtn">停止程式</button>
+</div>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("myDIV").addEventListener("mousemove", myFunction);
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = Math.random();
+}
+
+function removeHandler() {
+  document.getElementById("myDIV").removeEventListener("mousemove", myFunction);
+}
+</script>
+
+</body>
+</html>
+
+<html>節點
+<body>
+
+<h1 id="id01">My First Page</h1>
+<p id="id02"></p>
+
+<script>
+document.getElementById("id02").innerHTML = document.getElementById("id01").innerHTML;
+</script>
+
+</body>
+</html>
+
+
+
+<>間的關係
+https://www.w3schools.com/js/js_htmldom_navigation.asp
+```
