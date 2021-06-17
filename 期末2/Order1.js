@@ -49,6 +49,7 @@ function goShop() {
 }
 
 function newOrder() {
+
   Order.start()
 }
 
@@ -75,8 +76,8 @@ Order.start = function () {
   itemSelect.innerHTML = optionList(Shop.items)
   
   calcPrice()
-  /*if (localStorage.getItem('pos.Order.count') == null)
-    localStorage.setItem('pos.Order.count', 0)*/
+  if (localStorage.getItem('pos.Order.count') == null)
+    localStorage.setItem('pos.Order.count', 0)
 }
 
 
@@ -92,10 +93,9 @@ function submit() {
     alert('您的訂單是空的，無法送出！')
     return
   }
-  /*let orderCount = parseInt(localStorage.getItem('pos.Order.count')) + 1
+  let orderCount = parseInt(localStorage.getItem('pos.Order.count')) + 1
   localStorage.setItem('pos.Order.'+orderCount, JSON.stringify(Order))
-  localStorage.setItem('pos.Order.count', orderCount)*/
- 
+  localStorage.setItem('pos.Order.count', orderCount)
   Order.submitted = true
   submitButton.disabled = 'disabled'
   submitButton.innerHTML = '已送出'
