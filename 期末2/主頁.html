@@ -1,0 +1,145 @@
+<html>
+<head>
+	<meta charset='utf-8'> 
+	<title>虛假購物網</title>
+    <link rel="icon" href="picture/102-17.ico" type="image/x-icon" >
+    <style>
+       .top{
+            background:linear-gradient(to right, #5B4B00,#302002)	;
+            position: fixed;
+            width : 100%;
+            padding:15px;
+            height: 4%; 
+        }
+        .top a{
+            text-decoration: none;
+            color: #f7f79a;
+            font-family:" DFKai-sb";
+            padding:10px;
+            
+        }
+        .top a:hover{
+            background:linear-gradient(to right,#fafab2, #927700);;
+            color: 	#292100;
+        }
+        .right { 
+            float: right;  
+            padding-right: 3%;      
+        }
+
+        .btn{
+            border: none;
+            outline: none;
+            background-color: inherit;          
+        }
+        
+        .down{
+            display: none;
+            position: absolute;
+            background-color: #302002;
+            min-width: 60px;
+            z-index: 1;
+        }
+        .down a{
+            float: none;
+            color: #ddd;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: right;
+        }
+        .drop{
+            float: right;
+        }
+        
+        .drop:hover .down {
+            display: block;
+        }
+        main {
+            margin-bottom: 10px;
+            margin-right: auto;
+            margin-left: auto;
+            width: 90%;
+            padding: 10px;
+        }
+        .big {
+        padding: 10px 15px;
+        }
+        .back{
+            margin:0;
+            background-image: url(picture/052-05-2.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: repeat;
+        }
+        .all{ 
+            background:rgba(30,20,02,0.8) ;
+            border-collapse: collapse;
+            color: #ffffe2;
+            margin-left:auto; 
+            margin-right:auto;
+            
+        }
+        td, th {
+        text-align: left;
+        
+        }
+        th{
+            background:rgba(30,20,02,0.9) ;
+            
+        }
+        
+    </style>
+</head>
+<body class="back" onload="Shop.start()">
+<div>
+	<div class=top>
+        <div style=float:left>
+            <button class="btn"><a onclick="Shop.start()">購物網</a></button>
+        </div>
+        <div class=right>
+        <button class="btn"><a onclick="Order.start()">購買清單</a></button>
+        <div class=drop>
+            <button class="btn"><a onclick="Setting.start()">帳號</a></button>
+            <div class=down>
+                <a href="#login">登入</a>
+                <a href="#logout">登出</a>
+                <a href="#signup">註冊</a>
+                
+            </div>
+        </div>
+
+        <div class=drop>
+            <button class="btn"><a >圖片素材來源</a></button>
+            <div class=down>
+                <a href="https://twitter.com/key_999/media">望月けい</a>
+                <a href="https://burst.shopify.com/?ref=techmoon">Burst</a>
+                <a href="https://twitter.com/bukiiro/media">山吹色</a>
+            </div>
+        </div>
+        <div class=drop>
+            <button class="btn"><a>學生資料</a></button>
+            <div class=down>
+                <a href="https://github.com/cabdy1735/wp109b">git hub</a>
+                <a href="https://github.com/cabdy1735/wp109b/wiki">期中筆記</a>
+                <a href="#logout">程式碼</a>
+                <a href="#logout">報告</a>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+</div>
+<div style=height:12%></div>
+<div>
+    <main ></main>
+</div>    
+
+
+<script src="main.js"></script> 
+<script src="Order1.js"></script> 
+<script src="Setting.js"></script>
+
+</body>  
+
+</html>
