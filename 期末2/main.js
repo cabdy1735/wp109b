@@ -27,10 +27,10 @@ Shop.html = `
 <tr>
   <td><img src="picture/anna-bratiychuk-JUXybvdckeM-unsplash.jpg" alt="圖片顯示不出" width="300px" ></td>
   <td><ul>
-  <li>商品:海報</li>
-  <li>角色:本間ひまわり</li>
-  <li>規格:50x70公分</li>
-  <li>另贈:DIY萬用收納夾</li>
+  <li>商品:蛋糕</li>
+  <li>味道:甜味</li>
+  <li>規格:長12.6cm，寬5.2cm，高度4.5cm</li>
+  <li>另贈:草莓、巧克力糖將</li>
 </ul></td>
   <td>Unsplash</td>
   <td>150</td>
@@ -38,7 +38,7 @@ Shop.html = `
 </tr>
 <tr>
   <td><img src="picture/kaboompics_Christmas decorations - gifts - lights - tree -.jpg" alt="圖片顯示不出" width="300px" ></td>
-  <td>貓耳女僕卡片</td>
+  <td>海灘裝飾組</td>
   <td>Kaboompics</td>
   <td>50</td>
   <td><button  onclick=Order.start()">前往購買</button></td>
@@ -60,9 +60,10 @@ Shop.html = `
 </tr>
 <tr>
   <td><img src="picture/kaboompics_Cup of coffee - Zara Home.jpg" alt="圖片顯示不出" width="300px" ></td>
-  <td><p>雷丘玩偶</p>
-  <h5>玩偶採用氨倫超柔高彈力布料，延展性佳、細緻柔軟、親膚透氣，觸感舒服好摸。<h5>
-內部填充台灣製、綿滑細緻的長纖棉花，蓬鬆、彈性回復性佳，不怕擠壓。
+  <td><p>咖啡</p>
+  <h5>刺激中樞神經系統特別是腦細胞，興奮大腦皮質，使人提高警惕性、情緒激昂、睡意降低並減輕疲勞，維持持久的工作能力。<h5>
+  提高身體基礎代謝，抗老化，具有利尿作用，並能刺激腸胃蠕動，幫助排便。
+  <h5>來源:wiki
 <h5>文字來源:https://24h.pchome.com.tw/prod/DECU1L-A900ARLJ4?fq=/S/DECU1G</td>
   <td>Kaboompics</td>
   <td>500</td>
@@ -70,7 +71,7 @@ Shop.html = `
 </tr>
 <tr>
   <td><img src="picture/kaboompics_Different Types Of Sushi - Japanese Food Style.jpg" alt="圖片顯示不出" width="300px" ></td>
-  <td><p>魔法少女小圓:十周年紀念</p>鹿目圓、曉美焰</td>
+  <td><p>卷壽司</p>太卷、裏卷</td>
   <td>Kaboompics</td>
   <td>2000</td>
   <td><button onclick="Order.start()">前往購買</button></td>
@@ -100,7 +101,7 @@ Shop.html = `
 </tr>
 <tr>
   <td><img src="picture/farzad-mohamadi-QJKazBRVHx4-unsplash.jpg" alt="圖片顯示不出" width="300px" ></td>
-  <td><h2>女々しくて / covered by 卯月コウ, 剣持刀也, シェリン・バーガンディ</h2><p>這張很帥，然而MV太好笑了</td>
+  <td><h2>香氛蠟燭</h2><p>無煙蠟燭</td>
   <td>Unsplash</td>
   <td>450</td>
   <td><button onclick="Order.start()">前往購買</button></td>
