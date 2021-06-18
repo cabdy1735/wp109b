@@ -64,7 +64,7 @@ Shop.html = `
   <h5>刺激中樞神經系統特別是腦細胞，興奮大腦皮質，使人提高警惕性、情緒激昂、睡意降低並減輕疲勞，維持持久的工作能力。<h5>
   提高身體基礎代謝，抗老化，具有利尿作用，並能刺激腸胃蠕動，幫助排便。
   <h5>來源:wiki
-<h5>文字來源:https://24h.pchome.com.tw/prod/DECU1L-A900ARLJ4?fq=/S/DECU1G</td>
+</td>
   <td>Kaboompics</td>
   <td>500</td>
   <td><button onclick="Order.start()">前往購買</button></td>
